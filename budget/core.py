@@ -16,4 +16,13 @@ def add_transaction(
     memo: str,
 ) -> list[Transaction]:
     """Return transactions with one new budget transaction appended."""
-    pass
+    transaction: Transaction = {
+        "date": date,
+        "type": transaction_type,
+        "category": category,
+        "description": description,
+        "amount": amount,
+        "memo": memo,
+    }
+
+    return [*transactions, transaction]
